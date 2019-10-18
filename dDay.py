@@ -82,8 +82,15 @@ plt.scatter(X_test, Y_test, color='gray')
 plt.plot(X_test, predicted, color='red', linewidth=2)
 plt.show()
 
+# The mean absolute error is the difference between the actual value and the predicted value
 print('Mean Absolute Error: ', metrics.mean_absolute_error(Y_test, predicted))
+# The mean squared error tells you how close the regression line is to a set of points.
+# the distance of the points are squared to remove negative values and add more weight to larger differences. 
 print('Mean Squared Error: ', metrics.mean_squared_error(Y_test, predicted))
+# Root Mean Square Error (RMSE) is the standard deviation of the residuals (prediction errors). 
+# Residuals are a measure of how far from the regression line data points are; 
+# RMSE is a measure of how spread out these residuals are. In other words, 
+# it tells you how concentrated the data is around the line of best fit.
 print('Root Mean Squared Error: ', np.sqrt(metrics.mean_squared_error(Y_test, predicted)))
 
 
